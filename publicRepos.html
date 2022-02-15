@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CoopFinder</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <!-- coopfinder icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/coopfinder.ico">
+
+    <!-- themify -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+
+    <!-- font icon NEW-->
+    <link rel="stylesheet" type="text/css" href="assets/css/elegant-icons-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+
+    <!-- iconfont -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="sidebar-mini fixed">
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print">
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Return to Welcome page.">
+                <a href="welcome.html" class="logo">
+                    <img class="img-fluid able-logo" src="fig/coopFinder_logo.png" alt="Theme-logo">
+                </a>
+            </span>
+        </header>
+
+        <!-- Side-Nav-->
+        <aside class="main-sidebar hidden-print">
+            <section class="sidebar" id="sidebar-scroll">
+                
+            </section>
+        </aside>
+        <!-- Sidebar chat end-->
+        <div class="content-wrapper">
+            <!-- Container-fluid starts -->
+            <div class="container-fluid">
+                <!-- Header Starts -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for GitHub repository...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            </div>
+                            <!--h4>Table</!--h4-->
+                            <!--ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item">
+                                    <i class="icofont icofont-home"></i>
+                                </li>
+                                <li class="breadcrumb-item">Repositories</li>
+                            </!--ol-->
+                        </div>
+                    </div>
+                </div>
+                <!-- Header end -->
+                <!-- Tables start -->
+                <!-- Row start -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Hover effect table starts -->
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-12 table-responsive">
+                                        <table id="repositoriesTable" class="display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th style="color: #606060;">Repository Name</th>
+                                                    <th style="color: #606060;">Language</th>
+                                                    <th style="color: #606060;">Stars</th>
+                                                    <th style="color: #606060;">Forks</th>
+                                                    <th style="color: #606060;">Issues</th>
+                                                    <th style="color: #606060;">Created Date</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="repositoryDataTable">
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th style="color: #606060;">Repository Name</th>
+                                                    <th style="color: #606060;">Language</th>
+                                                    <th style="color: #606060;">Stars</th>
+                                                    <th style="color: #606060;">Forks</th>
+                                                    <th style="color: #606060;">Issues</th>
+                                                    <th style="color: #606060;">Created Date</th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hover effect table ends -->
+                    </div>
+                </div>
+                <!-- Row end -->
+                <!-- Tables end -->
+            </div>
+        </div>
+    </div> <!-- Wrapper Ends -->
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="assets/plugins/Jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="controller/repositoriesController.js"></script>
+    <script src="model/project.js"></script>
+</body>
+</html>

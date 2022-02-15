@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CoopFinder</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- font icon NEW-->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+
+    <!-- icons -->
+    <link rel="shortcut icon"  type="image/x-icon"  href="assets/images/coopfinder.ico">
+    <link rel="stylesheet"     type="text/css"      href="assets/icon/icofont/css/icofont.css">
+    <link rel="stylesheet"     type="text/css"      href="assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet"     type="text/css"      href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="sidebar-mini fixed">
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print">
+            <a href="welcome.html" class="logo">
+                <img class="img-fluid able-logo" src="fig/coopFinder_logo.png" alt="Theme-logo" title="Return to Welcome page.">
+            </a>
+        </header>
+
+        <!-- Side-Nav-->
+        <aside class="main-sidebar hidden-print">
+            <section class="sidebar" id="sidebar-scroll">
+                <!-- Sidebar Menu-->
+                <ul class="sidebar-menu">
+                    <li class="nav-level">--- Navigation</li>
+                    <li class="treeview" id="contributorsMenuLateralProjectListTreeView">
+                        <a class="waves-effect waves-dark" id="contributorsMenuLateralProjectList" href="publicRepos.html">
+                        <i class="icon-list" id="contributorsMenuLateralProjectListIcon"></i><span id="contributorsMenuLateralProjectListSpan">Projects</span>
+                        </a>                
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <!-- Sidebar chat end-->
+        <div class="content-wrapper">
+            <!-- Container-fluid starts -->
+            <div class="container-fluid">
+                <div class="row">
+                    <br>
+                </div>
+                <!-- Header Starts -->
+                <div class="row dashboard-header">
+                    <div class="col-lg-3 col-md-6">   
+                        <div class="card dashboard-product">
+                            <span>Repository</span>
+                            <h7 class="dashboard-total-products" id ="repositoryName">projectName</h7>
+                            <div class="side-box"></div>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                        <div class="card dashboard-product">
+                            <span>Stars</span>
+                            <h7 class="dashboard-total-products" id ="repositoryStarCount">0</h7>
+                            <div class="side-box">
+                                <i class="ti-star text-warning"></i>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                        <div class="card dashboard-product">
+                            <span>Forks</span>
+                            <h7 class="dashboard-total-products" id ="repositoryForkCount">0</h7>
+                            <div class="side-box ">
+                                <i class="ti-github text-info-color"></i>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                        <div class="card dashboard-product">
+                            <span>Open Issues</span>
+                            <h7 class="dashboard-total-products" id ="repositoryOpenIssuesCount">0</h7>
+                            <div class="side-box">
+                                <i class="ti-direction-alt text-danger-color"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header end -->
+
+                <!-- Tables start -->
+                <!-- Row start -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Hover effect table starts -->
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-12 table-responsive">
+                                        <!--div class="table-responsive"-->
+                                        <table id="contributorsTable" class="display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="color: #606060;">Name</th>
+                                                    <th style="color: #606060;">Fork Name</th>
+                                                    <th style="color: #606060;">Followers</th>
+                                                    <th style="color: #606060;">Following</th>
+                                                    <th style="color: #606060;">Merged Commits</th>
+                                                    <th style="color: #606060;">Non-merged Commits</th>
+                                                    <th style="color: #606060;">Last Commit Date</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="contributorInfoTable">
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="color: #606060;">Name</th>
+                                                    <th style="color: #606060;">Fork Name</th>
+                                                    <th style="color: #606060;">Followers</th>
+                                                    <th style="color: #606060;">Following</th>
+                                                    <th style="color: #606060;">Merged Commits</th>
+                                                    <th style="color: #606060;">Non-merged Commits</th>
+                                                    <th style="color: #606060;">Last Commit Date</th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hover effect table ends -->
+                    </div>
+                </div>
+                <!-- Row end -->
+                <!-- Tables end -->
+            </div>
+            <!-- Container-fluid ends -->
+        </div>
+    </div> <!-- Wrapper Ends -->
+
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="assets/plugins/Jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+    <script src="controller/repoContributorsController.js"></script>
+    <!-- TO-DO -->
+    <script src="model/btcdeb.js"></script> 
+    <script src="model/graphql.js"></script>
+    <script src="model/apisix.js"></script>
+    <script src="model/pythonDecouple.js"></script>
+    <script src="model/repoContributors.js"></script>
+</body>
+</html>
