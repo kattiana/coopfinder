@@ -30,6 +30,7 @@
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href=".././assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href=".././assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href=".././assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -61,11 +62,14 @@
                     <div class="col-sm-12">
                         <div class="main-header">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for GitHub repository...">
+                                <input type="text" class="form-control" placeholder="*Search for GitHub repository...">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">Go!</button>
                                 </span>
                             </div>
+                            <!--p style="text-align:left; font-size: 10px;" ><span style="color:gray;">*This functionality is not available yet. However, we are working on it. Thus, after GitHub users log in to this tool, it will support importing repositories from the user’s public repositories list or searching by a repository URL.</span></!p-->
+                            <p style="text-align:left" ><span style="color:gray; font-size: 11px;">*We are working on this functionality. When this is ready, it will support importing repositories from the user’s public repositories list or searching by a repository URL.</span></p>
+                            
                             <!--h4>Table</!--h4-->
                             <!--ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
                                 <li class="breadcrumb-item">
@@ -131,5 +135,14 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src=".././controllers/repositoriesController.js"></script>
     <script src=".././models/project.js"></script>
+
+    <script>
+        // When the user clicks on div, open the popup
+        function functionalityNotAvailableMSG() {
+            console.log ("functionalityNotAvailableMSG....")
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+        </script>
 </body>
 </html>
